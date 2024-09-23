@@ -25,7 +25,7 @@ while running:
 
     Fish.screen.blit(Fish.img,(Fish.position.x,Fish.position.y))
 
-    Fish.position = Fish.position + Fish.velocity
+    Fish.position = (Fish.position.add(Fish.velocity))
 
     pygame.display.flip()
     clock.tick(60)

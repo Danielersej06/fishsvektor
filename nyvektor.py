@@ -29,18 +29,6 @@ class Vector:
             return False
 
 
-        
-
-
 v1 = Vector(3,4)
 v2 = Vector(3,4)
-k = 5
-
-
-print("add", (v1.add(v2)))
-print("sub", (v1.sub(v2)))
-print("dot", (v1.dot(v2)))
-print("length",v1.length())
-print("scale",(v1.scale(k)))
-print("equal",(v1.eq(v2)))
 

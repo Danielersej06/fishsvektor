@@ -2,17 +2,19 @@ import math
 import pygame
 
 class Fish:
-    def __init__ (self,position,velocity,img,screen):
+    def __init__ (self,position,velocity,screen):
         self.position = position
         self.velocity = velocity
-        self.img = img
         self.screen = screen
+        img = pygame.image.load('fish.png')
+        img = pygame.transform.scale(img, (200,200))
     
-    def upd (self,position,velocity):
+    def upd(self):
+        self.velocity = self.screenconfinement()
         self.position += self.velocity
     
-    def draw (self, position):
-        self.screen.blit(self.img, (self.position.x,position.y))
+    def draw (self):
+        self.screen.blit(self.img, (self.position.x,self.position.y))
     
     def screenconfinement(self):
         velocity = self.velocity
@@ -20,5 +22,6 @@ class Fish:
             velocity.x = -velocity.x
         if self.position.y <= 0 or self.position.y >= 600- 200:
             velocity.y = -velocity.y
+        print(velocity)
         return velocity
 

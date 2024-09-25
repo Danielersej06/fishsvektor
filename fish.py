@@ -10,7 +10,7 @@ class Fish:
         img = pygame.transform.scale(img, (200,200))
     
     def upd(self):
-        self.velocity = self.screenconfinement()
+        self.screenconfinement()
         self.position += self.velocity
     
     def draw (self):
@@ -20,8 +20,9 @@ class Fish:
         velocity = self.velocity
         if self.position.x <= 0 or self.position.x >= 800 - 200:
             velocity.x = -velocity.x
+        
         if self.position.y <= 0 or self.position.y >= 600- 200:
             velocity.y = -velocity.y
-        print(velocity)
-        return velocity
+        print(self.velocity)
+        return (velocity)
 

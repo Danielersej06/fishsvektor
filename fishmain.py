@@ -8,7 +8,7 @@ Fish.screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 running = True
 
-fish=Fish(Vector(300,400),Vector(1,1))
+fish= Fish(Vector(300,400),Vector(2,2),())
 
 
 while running:

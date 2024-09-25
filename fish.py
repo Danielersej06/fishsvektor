@@ -6,12 +6,12 @@ class Fish:
         self.position = position
         self.velocity = velocity
         self.screen = screen
-        img = pygame.image.load('fish.png')
-        img = pygame.transform.scale(img, (200,200))
+        self.img = pygame.image.load('fish.png')
+        self.img = pygame.transform.scale(self.img, (200,200))
     
     def upd(self):
-        self.screenconfinement()
-        self.position += self.velocity
+        self.screenconfinement
+        self.position += self.position + self.velocity
     
     def draw (self):
         self.screen.blit(self.img, (self.position.x,self.position.y))

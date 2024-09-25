@@ -4,25 +4,25 @@ class Vector:
         self.x = x
         self.y = y
 
-    def add(self, other):
+    def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y)
     
-    def sub(self,other):
+    def __sub__(self,other):
         return Vector(self.x-other.x,self.y-other.y)
 
     def __str__(self):
         return f"({self.x},{self.y})"
     
-    def dot(self,other):
+    def __dot__(self,other):
         return self.x*other.x+self.y*other.y
     
-    def length(self):
+    def __length__(self):
         return math.sqrt(self.x*self.x+self.y*self.y)
 
-    def scale(self,k):
+    def __scale__(self,k):
         return Vector(self.x*k,self.y*k)
     
-    def eq(selv,other):
+    def __eq__(self,other):
         if v1==v2:
             return True
         else:

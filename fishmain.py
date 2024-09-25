@@ -4,11 +4,11 @@ from nyvektor import *
 from fish import *
 
 pygame.init()
-Fish.screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 running = True
 
-fish= Fish(Vector(300,400),Vector(2,2),())
+fish= Fish(Vector(300,400),Vector(2,2),screen)
 
 
 while running:
@@ -16,11 +16,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    Fish.upd()
+    fish.upd()
 
-    Fish.draw()
-
-    Fish.screen.blit(Fish.img,(Fish.position.x,Fish.position.y))
+    fish.draw()
 
 
     pygame.display.flip()

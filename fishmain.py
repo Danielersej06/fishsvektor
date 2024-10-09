@@ -4,7 +4,7 @@ from nyvektor import *
 from fish import *
 
 pygame.init()
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((800, 700))
 clock = pygame.time.Clock()
 running = True
 

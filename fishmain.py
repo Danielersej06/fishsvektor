@@ -18,8 +18,6 @@ while running:
 
     fish.upd()
 
-    fish.screenconfinement()
-
     fish.draw()
 
     pygame.display.flip()

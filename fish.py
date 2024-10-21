@@ -11,6 +11,7 @@ class Fish:
     
     def upd(self):
         self.position += self.velocity
+        Fish.screenconfinement(self)
         
     
     def draw (self):

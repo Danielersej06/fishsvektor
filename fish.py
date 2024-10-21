@@ -1,5 +1,6 @@
 import math
 import pygame
+from flock import *
 
 class Fish:
     def __init__ (self,position,velocity,screen):
@@ -15,8 +16,9 @@ class Fish:
         
     
     def draw (self):
+            self.screen.fill((0,0,0))
             self.screen.blit(self.img, (self.position.x,self.position.y))
-    
+
     def screenconfinement(self):
         velocity = self.velocity
         if self.position.x <= 0 or self.position.x >= 700:
